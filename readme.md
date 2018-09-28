@@ -82,4 +82,18 @@ beta__1    2.63  0.52        0.01       1.67        3.67  1409.75       1
 sigma      0.99  0.07        0          0.87        1.15  1636.45       1
 
 
+### Stochastic volatility
+
+Stochastic volatility modelling treats price volatility as a random variable.
+Allowing the price to vary in the stochastic volatility models improves the accuracy of calculations and forecasts.
+
+The distribution of market returns is highly non-normal, which makes sampling the volatitlites significantly more difficult.
+This example has 400+ parameters, so metropolis-hastings would get bogged down.
+NUTS is more efficient.
+
+The model.
+Asset prices have time-varying volatility:
+in some periods they are highly variable, in others they are very stable.
+Stochastic volatility models have a latent volatility variable, which changes over time.
+
 
